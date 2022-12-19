@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.stream.entity.Registration;
 import com.stream.service.RegistrationService;
 
+import reactor.core.publisher.Mono;
+
 
 @RestController
 @RequestMapping("/api/signUp")
@@ -18,9 +20,9 @@ public class RegistrationController{
     RegistrationService registraionService;
 
     @PostMapping()
-    public void registereUser(@RequestBody Registration reg){
+    public Mono<Registration> registereUser(@RequestBody Mono<Registration> reg){
 
-        registraionService.registereUser(reg);
+       return registraionService.registereUser(reg);
 
     }
 }
