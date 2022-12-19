@@ -17,6 +17,8 @@ public class Registration{
     String email;
     String mobileNo;
     String userType;
+    String password;
+    String confirmPassword;
 
 
 }
