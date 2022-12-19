@@ -1,7 +1,7 @@
 
 
 @RestController
-@RequestMapping("/api/signup")
+@RequestMapping("/api/signUp")
 public class RegistrationController{
 
     @Autowired
